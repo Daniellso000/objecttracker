@@ -1,11 +1,13 @@
+#Import necessary libs
 import numpy as np
 import cv2
 import keyboard
 import threading
 
+#Resizing the height and width of the video
 def resize(img):
         return cv2.resize(img,(1200,800)) # arg1- input image, arg- output_width, output_height
-
+#Capture and mapping the image
 cap=cv2.VideoCapture("teste.mp4")
 cap.set(cv2.CAP_PROP_BUFFERSIZE, 3)
 ret,frame=cap.read()
